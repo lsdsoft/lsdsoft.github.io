@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use Call Screening Agent | LSD Software</title>
+    <style>
+        :root {
+            --primary-color: #1a73e8;
+            --text-color: #202124;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --border-color: #dadce0;
+            --accent-green: #0f9d58;
+            --accent-red: #d93025;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        header img {
+            height: 60px;
+            width: auto;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            margin-top: 1.25rem;
+            color: #3c4043;
+        }
+
+        .privacy-banner {
+            background-color: #e8f0fe;
+            border-left: 4px solid var(--primary-color);
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .privacy-banner h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .icon-card {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.25rem;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .icon-card img {
+            width: 72dp;
+            height: 72dp;
+            max-width: 100px;
+            border-radius: 12px;
+            margin-bottom: 0.75rem;
+        }
+
+        .icon-card h4 {
+            margin: 0.5rem 0;
+            font-size: 1.05rem;
+        }
+
+        ul {
+            padding-left: 1.25rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.85rem;
+            color: #70757a;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="LSD_Software_Logo.png.jpg" alt="LSD Software Logo">
+        <div>
+            <h1>Call Screening Agent</h1>
+            <div style="font-size: 0.9rem; color: #5f6368;">User Guide &amp; Instructions</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>How to Use Call Screening Agent</h1>
+        <p class="subtitle">A complete operational guide for managing screening features, whitelists, and activity logs.</p>
+
+        <div class="privacy-banner">
+            <h3>🔒 Your Data Stays On Your Device</h3>
+            <p><strong>Call Screening Agent</strong> runs entirely locally using Android's native <code>CallScreeningService</code> and local Room database storage. <strong>No phone numbers, contacts, or call logs are ever sent over the internet or transmitted to external servers.</strong> Your privacy is 100% guaranteed.</p>
+        </div>
+
+        <h2>1. App Overview &amp; How It Works</h2>
+        <p>Call Screening Agent intercepts incoming phone calls before your device rings. It evaluates whether the caller is a known contact or on your Whitelist. If unknown or unlisted, it silently blocks or mutes the call and records the entry in your local screened log.</p>
+
+        <h2>2. Main Activity &amp; Status Header</h2>
+        <p>When you launch the app, the main dashboard provides an immediate view of your system screening state:</p>
+        <ul>
+            <li><strong>Status Indicator:</strong> Displays whether screening is currently <strong>Active</strong>, temporarily paused (e.g., <strong>24 Hours</strong>), or <strong>Disabled</strong>.</li>
+            <li><strong>Permission Banner:</strong> If required role permissions (such as <code>ROLE_CALL_SCREENING</code> or Notifications) are revoked, a prompt will appear asking you to re-grant them so screening can resume.</li>
+        </ul>
+
+        <h2>3. Action Button Icons Explained</h2>
+        <p>The screened call log and whitelist entries feature action button icons to manage your logs cleanly:</p>
+
+        <div class="icon-grid">
+            <div class="icon-card">
+                <img src="icon_remove_item.png" alt="Remove / Clear Icon">
+                <h4>Remove / Clear Icon (Red Minus)</h4>
+                <p>Located on log entries and whitelist items. Tapping this removes the selected phone number or clears the record from your local database.</p>
+            </div>
+            <div class="icon-card">
+                <img src="icon_add_contact.png" alt="Add to Contacts Icon">
+                <h4>Add to Contacts Icon (Green Bust)</h4>
+                <p>Tapping this green button immediately prompts Android to create a new entry in your phone's address book for that blocked number.</p>
+            </div>
+        </div>
+
+        <h2>4. Whitelist Section</h2>
+        <p>Whitelisted phone numbers bypass call screening and are permitted to ring through:</p>
+        <ul>
+            <li><strong>System Text Selection:</strong> Highlight any phone number in another app (like Chrome or Messages), tap the context menu, and choose <strong>Add to Whitelist</strong>.</li>
+            <li><strong>Expiration Rule:</strong> Whitelisted numbers remain active for 7 days before automatically expiring, preventing temporary numbers from permanently cluttering your permissions.</li>
+        </ul>
+
+        <h2>5. Screened Call Log Section</h2>
+        <p>The main screen lists every blocked incoming call with full local history:</p>
+        <ul>
+            <li><strong>Log Entries:</strong> Displays the phone number on the main line and the exact timestamp on the subtitle line (e.g., <em>Blocked • Nov 4, 2:15 PM</em>).</li>
+            <li><strong>Clear List Button:</strong> Located at the top right of the card, allowing you to wipe your entire screened call log in one tap.</li>
+        </ul>
+
+        <h2>6. Settings Page</h2>
+        <p>Access the Settings menu via the gear icon in the top app bar to adjust app behaviors:</p>
+        <ul>
+            <li><strong>24 Hours:</strong> Pauses call screening for exactly 24 hours. Screening automatically reactivates after the timer expires.</li>
+            <li><strong>Until Re-enabled:</strong> Permanently disables call screening until manually switched back on via the main dashboard.</li>
+            <li><strong>Instructions &amp; Help:</strong> Opens this online user guide.</li>
+        </ul>
+    </div>
+
+    <footer>
+        LSD Software &copy; 2026. All rights reserved.
+    </footer>
+
+</body>
+</html>
