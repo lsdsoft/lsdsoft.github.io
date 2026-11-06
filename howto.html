@@ -97,8 +97,8 @@
         }
 
         .icon-card img {
-            width: 72dp;
-            height: 72dp;
+            width: 72px;
+            height: 72px;
             max-width: 100px;
             border-radius: 12px;
             margin-bottom: 0.75rem;
@@ -107,6 +107,15 @@
         .icon-card h4 {
             margin: 0.5rem 0;
             font-size: 1.05rem;
+        }
+
+        .note-box {
+            background-color: #fff8e1;
+            border-left: 4px solid #fbc02d;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 4px 4px 0;
+            font-size: 0.95rem;
         }
 
         ul {
@@ -128,7 +137,7 @@
 <body>
 
     <header>
-        <img src="LSD_Software_Logo.png.jpg" alt="LSD Software Logo">
+        <img src="./LSD_Software_Logo.png.jpg" alt="LSD Software Logo">
         <div>
             <h1>Call Screening Agent</h1>
             <div style="font-size: 0.9rem; color: #5f6368;">User Guide &amp; Instructions</div>
@@ -137,7 +146,7 @@
 
     <div class="container">
         <h1>How to Use Call Screening Agent</h1>
-        <p class="subtitle">A complete operational guide for managing screening features, whitelists, and activity logs.</p>
+        <p class="subtitle">A complete operational guide for managing screening features, whitelists, activity logs, and scheduled summary reports.</p>
 
         <div class="privacy-banner">
             <h3>🔒 Your Data Stays On Your Device</h3>
@@ -147,10 +156,10 @@
         <h2>1. App Overview &amp; How It Works</h2>
         <p>Call Screening Agent intercepts incoming phone calls before your device rings. It evaluates whether the caller is a known contact or on your Whitelist. If unknown or unlisted, it silently blocks or mutes the call and records the entry in your local screened log.</p>
 
-        <h2>2. Main Activity &amp; Status Header</h2>
+        <h2>2. Main Dashboard Screen &amp; Status Header</h2>
         <p>When you launch the app, the main dashboard provides an immediate view of your system screening state:</p>
         <ul>
-            <li><strong>Status Indicator:</strong> Displays whether screening is currently <strong>Active</strong>, temporarily paused (e.g., <strong>24 Hours</strong>), or <strong>Disabled</strong>.</li>
+            <li><strong>Status Indicator:</strong> Displays whether screening is currently <strong>Active & Guarding</strong>, or <strong>Disabled</strong>.</li>
             <li><strong>Permission Banner:</strong> If required role permissions (such as <code>ROLE_CALL_SCREENING</code> or Notifications) are revoked, a prompt will appear asking you to re-grant them so screening can resume.</li>
         </ul>
 
@@ -173,6 +182,7 @@
         <h2>4. Whitelist Section</h2>
         <p>Whitelisted phone numbers bypass call screening and are permitted to ring through:</p>
         <ul>
+            <li><strong>Manual Whitelist Entry:</strong></string> To manually add a phone number to the Whitelist, enter the number in the field and press the "+" button. The number will be whitelisted for seven days. If you would like to keep the number longer than seven days, you must re-enter the number. Long-pressing the number will copy the number to the system clipboard, and you can paste it back into the entry field and press "+" to re-add the number to the Whitelist.</li>
             <li><strong>System Text Selection:</strong> Highlight any phone number in another app (like Chrome or Messages), tap the context menu, and choose <strong>Add to Whitelist</strong>.</li>
             <li><strong>Expiration Rule:</strong> Whitelisted numbers remain active for 7 days before automatically expiring, preventing temporary numbers from permanently cluttering your permissions.</li>
         </ul>
@@ -183,13 +193,34 @@
             <li><strong>Log Entries:</strong> Displays the phone number on the main line and the exact timestamp on the subtitle line (e.g., <em>Blocked • Nov 4, 2:15 PM</em>).</li>
             <li><strong>Clear List Button:</strong> Located at the top right of the card, allowing you to wipe your entire screened call log in one tap.</li>
         </ul>
+        <div class="note-box">
+            <strong>Why do many screened calls show "Caller ID not provided"?</strong><br>
+            Automated telemarketers and spammers frequently mask or withhold their incoming number headers when dialing out. When an incoming call arrives without valid carrier-transmitted caller ID data, Android processes the call without a displayable phone number, resulting in the <em>"Caller ID not provided"</em> label in your log.
+        </div>
 
         <h2>6. Settings Page</h2>
-        <p>Access the Settings menu via the gear icon in the top app bar to adjust app behaviors:</p>
+        <p>Access the Settings menu via the gear icon in the top app bar to adjust app behaviors and scheduled notifications:</p>
+
+        <h3>Disable Screening Options</h3>
         <ul>
             <li><strong>24 Hours:</strong> Pauses call screening for exactly 24 hours. Screening automatically reactivates after the timer expires.</li>
             <li><strong>Until Re-enabled:</strong> Permanently disables call screening until manually switched back on via the main dashboard.</li>
-            <li><strong>Instructions &amp; Help:</strong> Opens this online user guide.</li>
+        </ul>
+
+        <h3>Daily &amp; Weekly Report Notifications</h3>
+        <p>Call Screening Agent can send automatic notification summaries to keep you informed of recent call filtering activity without needing to open the app manually:</p>
+        <ul>
+            <li><strong>Daily Report Switch:</strong> Toggle to enable or disable a daily summary notification scheduled every 24 hours.</li>
+            <li><strong>Weekly Report Switch:</strong> Toggle to enable or disable a comprehensive weekly summary report scheduled every 7 days.</li>
+        </ul>
+
+        <div class="note-box">
+            <strong>Note on Report Notifications:</strong> Scheduled daily and weekly report notifications are smart alerts. Notifications will <strong>only trigger if there were actual blocked calls recorded</strong> during that respective timeframe. If no calls were screened during the period, no unnecessary notification will interrupt you.
+        </div>
+
+        <h3>Help &amp; Documentation</h3>
+        <ul>
+            <li><strong>How to Use Call Screening Agent:</strong> Launches this web page guide at any time.</li>
         </ul>
     </div>
 
