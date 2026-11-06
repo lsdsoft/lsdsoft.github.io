@@ -168,14 +168,29 @@
 
         <div class="icon-grid">
             <div class="icon-card">
-                <img src="icon_remove_item.png" alt="Remove / Clear Icon">
-                <h4>Remove / Clear Icon</h4>
-                <p>Located on log entries and whitelist items. Tapping this removes the selected phone number or clears the record from your local database.</p>
+                <img src="./appic_delete.png" alt="Remove / Clear Icon">
+                <h4>Delete Icon</h4>
+                <p>Located next to each whitelist item. Tapping this removes the selected phone number or clears the record from your local database.</p>
             </div>
             <div class="icon-card">
-                <img src="icon_add_contact.png" alt="Add to Contacts Icon">
-                <h4>Add to Contacts Icon (Green Bust)</h4>
+                <img src="./appic_contact.png" alt="Add to Contacts Icon">
+                <h4>Add to Contacts Icon</h4>
                 <p>Tapping this button next to a Whitelisted number immediately prompts Android to create a new entry in your phone's address book for that blocked number.</p>
+            </div>
+            <div class="icon-card">
+                <img src="./appic_trash.png" alt="Add to Contacts Icon">
+                <h4>Clear Screened Calls Log</h4>
+                <p>Located next to the <strong>Screened Call Log</strong> header, this button will permanently delete the log of screened calls in the list from your device. Since this list is only stored on your device, there will be no record left anywhere of these screened calls!</p>
+            </div>
+            <div class="icon-card">
+                <img src="./appic_contact.png" alt="Add to Contacts Icon">
+                <h4>Add to Contacts Icon</h4>
+                <p>Tapping this button next to a Whitelisted number immediately prompts Android to create a new entry in your phone's address book for that blocked number.</p>
+            </div>
+            <div class="icon-card">
+                <img src="./appic_up.png" alt="Add to Whitelist Icon">
+                <h4>Add to Whitelist Icon</h4>
+                <p>Tapping this button next to a screened number immediately adds it to the Whitelist. Calls from this number will be immediately accepted. The number will remain on the Whitelist for seven days.</p>
             </div>
         </div>
 
@@ -185,6 +200,7 @@
             <li><strong>Manual Whitelist Entry:</strong></string> To manually add a phone number to the Whitelist, enter the number in the field and press the "+" button. The number will be whitelisted for seven days. If you would like to keep the number longer than seven days, you must re-enter the number. Long-pressing the number will copy the number to the system clipboard, and you can paste it back into the entry field and press "+" to re-add the number to the Whitelist.</li>
             <li><strong>System Text Selection:</strong> Highlight any phone number in another app (like Chrome or Messages), tap the context menu, and choose <strong>Add to Whitelist</strong>.</li>
             <li><strong>Expiration Rule:</strong> Whitelisted numbers remain active for 7 days before automatically expiring, preventing temporary numbers from permanently cluttering your permissions.</li>
+            <li>Long Press:</li> A long press on any number in the Whitelist copies it to the system clipboard.
         </ul>
 
         <h2>5. Screened Call Log Section</h2>
@@ -198,7 +214,7 @@
             Automated telemarketers and spammers frequently mask or withhold their incoming number headers when dialing out. When an incoming call arrives without valid carrier-transmitted caller ID data, Android processes the call without a displayable phone number, resulting in the <em>"Caller ID not provided"</em> label in your log.
         </div>
 
-        <h2>6. Settings Page</h2>
+        <h2>6. Settings Page</h2><img src="./appic_settings.png" alt="Settings icon" style="height: 1em; width: auto; vertical-align: middle;" />
         <p>Access the Settings menu via the gear icon in the top app bar to adjust app behaviors and scheduled notifications:</p>
 
         <h3>Disable Screening Options</h3>
@@ -210,8 +226,8 @@
         <h3>Daily &amp; Weekly Report Notifications</h3>
         <p>Call Screening Agent can send automatic notification summaries to keep you informed of recent call filtering activity without needing to open the app manually:</p>
         <ul>
-            <li><strong>Daily Report Switch:</strong> Toggle to enable or disable a daily summary notification scheduled every 24 hours.</li>
-            <li><strong>Weekly Report Switch:</strong> Toggle to enable or disable a comprehensive weekly summary report scheduled every 7 days.</li>
+            <li><strong>Daily Report Switch:</strong> Toggle to enable or disable a daily summary notification scheduled every 24 hours. You control what time of day the notification is sent.</li>
+            <li><strong>Weekly Report Switch:</strong> Toggle to enable or disable a comprehensive weekly summary report scheduled every 7 days. You control what day and time of day the notification is sent.</li>
         </ul>
 
         <div class="note-box">
