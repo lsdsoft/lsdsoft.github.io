@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Call Screening Agent | LSD Software</title>
+    <style>
+        :root {
+            --primary-color: #1a73e8;
+            --text-color: #202124;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --border-color: #dadce0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        header img {
+            height: 60px;
+            width: auto;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            margin-top: 1.75rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        ul {
+            padding-left: 1.25rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .effective-date {
+            font-size: 0.9rem;
+            color: #5f6368;
+            margin-bottom: 1.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.85rem;
+            color: #70757a;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./LSD_Software_Logo.png" alt="LSD Software Logo">
+        <div>
+            <h1>Call Screening Agent</h1>
+            <div style="font-size: 0.9rem; color: #5f6368;">LSD Software</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <div class="effective-date">Effective Date: November 4, 2026</div>
+
+        <p>LSD Software ("we," "our," or "us") respects your privacy. This Privacy Policy explains how the <strong>Call Screening Agent</strong> Android application collects, uses, stores, and protects your information.</p>
+
+        <h2>1. Core Privacy Commitment: 100% Local Processing</h2>
+        <p><strong>Call Screening Agent</strong> is designed with privacy as its primary foundation. All screening operations, phone number comparisons, and call logs remain strictly on your physical Android device. We do not collect, transmit, sell, or rent your personal data, phone numbers, contacts, or call logs to external servers or third parties under any circumstances.</p>
+
+        <h2>2. Information Collection and Storage</h2>
+        <p>The application processes the following data locally on your device:</p>
+        <ul>
+            <li><strong>Incoming Phone Numbers &amp; Call Logs:</strong> Phone numbers of incoming callers are processed in real-time by the application's screening service to determine whether to allow or block the call. Blocked call history (including phone number and timestamp) is stored in a local, encrypted Room database on your device.</li>
+            <li><strong>Whitelist Data:</strong> Numbers added to your Whitelist (either manually or via the Android Process Text context menu) are stored locally in your device's private App Preferences (`SharedPreferences`). Whitelisted numbers automatically expire after 7 days and are cleaned locally.</li>
+            <li><strong>Contact List Access:</strong> If granted, the application queries your device's address book (`ContactsContract`) strictly to identify whether incoming callers are known contacts. Your contacts are never read out of your device or transmitted off-device.</li>
+        </ul>
+
+        <h2>3. Use of Permissions</h2>
+        <p>To perform its core functions as a call screening utility, the app requires specific Android permissions:</p>
+        <ul>
+            <li><strong>Call Screening Role (`ROLE_CALL_SCREENING`):</strong> Required to intercept incoming phone calls and automatically block unwanted numbers.</li>
+            <li><strong>Notifications (`POST_NOTIFICATIONS`):</strong> Required to display user-configurable daily and weekly summaries of blocked call activity, as well as active screening status alerts.</li>
+            <li><strong>Process Text (`ACTION_PROCESS_TEXT`):</strong> Allows users to highlight phone numbers in other applications and add them directly to the local app whitelist.</li>
+        </ul>
+
+        <h2>4. Data Retention &amp; User Control</h2>
+        <p>You have total control over all data generated by <strong>Call Screening Agent</strong>:</p>
+        <ul>
+            <li>Call history entries can be individually or completely cleared directly within the application's main log screen.</li>
+            <li>Uninstalling the application immediately removes all locally saved databases, whitelists, and preferences permanently from your device.</li>
+        </ul>
+
+        <h2>5. Children's Privacy</h2>
+        <p>The application does not knowingly collect or request personal information from anyone under the age of 13. All data remains local to the device owner.</p>
+
+        <h2>6. Policy Updates</h2>
+        <p>We may update our Privacy Policy from time to time. Any changes will be posted directly on this web page with an updated effective date.</p>
+
+        <h2>7. Terms & Conditions</h2>
+        <p>Use of this applications is subject to the Terms and Conditions set forth <a href="terms.html">here</a>.</p>
+        
+        <h2>8. Contact Us</h2>
+        <p>If you have any questions or concerns regarding this Privacy Policy, please contact us at:</p>
+        <p><strong>LSD Software</strong><br>
+        Email: <a href="mailto:ljaisd@gmail.com">ljaisd@gmail.com</a></p>
+    </div>
+
+    <footer>
+        LSD Software &copy; 2026. All rights reserved.
+    </footer>
+
+</body>
+</html>
