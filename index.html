@@ -1,146 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Call Screening Agent | LSD Software</title>
-    <style>
-        :root {
-            --primary-color: #1a73e8;
-            --text-color: #202124;
-            --bg-color: #f8f9fa;
-            --card-bg: #ffffff;
-            --border-color: #dadce0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LSD Software — Independent Software Development</title>
+  <style>
+    :root {
+      --bg-dark: #0f172a;
+      --card-bg: #1e293b;
+      --card-border: #334155;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent-blue: #38bdf8;
+      --accent-hover: #0284c7;
+    }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        header {
-            background-color: var(--card-bg);
-            border-bottom: 1px solid var(--border-color);
-            padding: 1rem 2rem;
-            display: flex;
-            align-items: center;
-            gap: 1.25rem;
-        }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-        header img {
-            height: 60px;
-            width: auto;
-        }
+    /* Responsive Hero Header */
+    .hero-header {
+      width: 100%;
+      background-color: #090d16;
+      border-bottom: 1px solid var(--card-border);
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 1.5rem;
-            color: var(--text-color);
-        }
+    .hero-header img {
+      width: 100%;
+      max-width: 1400px;
+      height: auto;
+      max-height: 440px;
+      object-fit: cover;
+      object-position: left center;
+      display: block;
+    }
 
-        .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
+    /* Main Container */
+    main {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem;
+      flex: 1;
+    }
 
-        h2 {
-            color: var(--primary-color);
-            font-size: 1.25rem;
-            margin-top: 1.75rem;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 0.5rem;
-        }
+    section {
+      margin-bottom: 2.5rem;
+    }
 
-        ul {
-            padding-left: 1.25rem;
-        }
+    h1 {
+      font-size: 1.85rem;
+      margin-bottom: 0.75rem;
+      color: var(--text-main);
+    }
 
-        li {
-            margin-bottom: 0.5rem;
-        }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 1rem;
+      color: var(--accent-blue);
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 0.4rem;
+    }
 
-        .effective-date {
-            font-size: 0.9rem;
-            color: #5f6368;
-            margin-bottom: 1.5rem;
-        }
+    p {
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
 
-        footer {
-            text-align: center;
-            padding: 2rem;
-            font-size: 0.85rem;
-            color: #70757a;
-        }
-    </style>
+    /* App Showcase Card */
+    .app-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1.75rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .app-card:hover {
+      border-color: var(--accent-blue);
+    }
+
+    /* Icon Cropper: Extracts the centered squircle from the 16:9 image */
+    .app-icon-link {
+      flex-shrink: 0;
+      display: block;
+      width: 132px;
+      height: 132px;
+      border-radius: 26px;
+      overflow: hidden;
+      border: 2px solid #475569;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .app-icon-link:hover {
+      transform: scale(1.04);
+      box-shadow: 0 8px 22px rgba(56, 189, 248, 0.3);
+    }
+
+    .app-icon-link img {
+      width: 100%;
+      height: 100%;
+      /* Zooms in to crop out the dark sidebars of the 16:9 source image */
+      object-fit: cover;
+      object-position: center center;
+      transform: scale(1.18);
+      display: block;
+    }
+
+    .app-details {
+      flex: 1;
+    }
+
+    .app-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 0.35rem;
+    }
+
+    .app-subtitle {
+      font-size: 0.9rem;
+      color: var(--accent-blue);
+      margin-bottom: 0.75rem;
+      font-weight: 500;
+    }
+
+    .app-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.1rem;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background-color: var(--accent-blue);
+      color: #0f172a;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 0.65rem 1.25rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #7dd3fc;
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      background-color: transparent;
+      color: var(--text-main);
+      border: 1px solid var(--card-border);
+      text-decoration: none;
+      padding: 0.65rem 1.1rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--text-muted);
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      border-top: 1px solid var(--card-border);
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+
+    footer a {
+      color: var(--accent-blue);
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Mobile / Phone Responsive Adjustments */
+    @media (max-width: 640px) {
+      .hero-header img {
+        max-height: 210px;
+        object-position: 12% center;
+      }
+
+      main {
+        padding: 1.75rem 1rem;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .app-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem 1.25rem;
+        gap: 1.25rem;
+      }
+
+      .app-icon-link {
+        width: 116px;
+        height: 116px;
+      }
+
+      .app-actions {
+        justify-content: center;
+      }
+
+      .btn-primary, .btn-secondary {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="./LSD_Software_Logo.png" alt="LSD Software Logo">
-        <div>
-            <h1>Call Screening Agent</h1>
-            <div style="font-size: 0.9rem; color: #5f6368;">LSD Software</div>
+
+  <!-- Header Banner -->
+  <header class="hero-header">
+    <img src="LSD_Software_Header_4096.jpg" alt="LSD Software — Mount Fuji and Cherry Blossoms">
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section>
+      <h1>About LSD Software</h1>
+      <p>
+        LSD Software is an independent, single-developer software studio focused on building practical, lightweight, and privacy-respecting utilities. After years of developing custom desktop tools in C++, LSD Software is expanding into mobile applications designed to solve everyday problems cleanly and reliably without bloat or subscriptions.
+      </p>
+    </section>
+
+    <section>
+      <h2>Android Applications</h2>
+      <div class="app-card">
+        <!-- App Icon Link to Google Play Store -->
+        <a class="app-icon-link" 
+           href="https://play.google.com/store/apps/details?id=com.lsdsoft.callscreeningagent" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           aria-label="Download Call Screening Agent on Google Play">
+          <img src="Gemini_Generated_Image_1rs1ew1rs1ew1rs1.jfif" alt="Call Screening Agent App Icon">
+        </a>
+
+        <!-- App Description & Links -->
+        <div class="app-details">
+          <div class="app-title">Call Screening Agent</div>
+          <div class="app-subtitle">On-Device Spam & Unwanted Call Protection for Android</div>
+          <p>
+            Take back control of your phone. Call Screening Agent filters unwanted calls directly on your device using customizable rules, temporary contact whitelisting, and detailed local call logs—keeping your call history private and off external servers.
+          </p>
+          <div class="app-actions">
+            <a class="btn-primary" 
+               href="https://play.google.com/store/apps/details?id=com.lsdsoft.callscreeningagent" 
+               target="_blank" 
+               rel="noopener noreferrer">
+              Get it on Google Play
+            </a>
+            <a class="btn-secondary" href="howto.html">How-To Guide</a>
+            <a class="btn-secondary" href="privacy.html">Privacy Policy</a>
+          </div>
         </div>
-    </header>
+      </div>
+    </section>
+  </main>
 
-    <div class="container">
-        <h1>Privacy Policy</h1>
-        <div class="effective-date">Effective Date: November 4, 2026</div>
-
-        <p>LSD Software ("we," "our," or "us") respects your privacy. This Privacy Policy explains how the <strong>Call Screening Agent</strong> Android application collects, uses, stores, and protects your information.</p>
-
-        <h2>1. Core Privacy Commitment: 100% Local Processing</h2>
-        <p><strong>Call Screening Agent</strong> is designed with privacy as its primary foundation. All screening operations, phone number comparisons, and call logs remain strictly on your physical Android device. We do not collect, transmit, sell, or rent your personal data, phone numbers, contacts, or call logs to external servers or third parties under any circumstances.</p>
-
-        <h2>2. Information Collection and Storage</h2>
-        <p>The application processes the following data locally on your device:</p>
-        <ul>
-            <li><strong>Incoming Phone Numbers &amp; Call Logs:</strong> Phone numbers of incoming callers are processed in real-time by the application's screening service to determine whether to allow or block the call. Blocked call history (including phone number and timestamp) is stored in a local, encrypted Room database on your device.</li>
-            <li><strong>Whitelist Data:</strong> Numbers added to your Whitelist (either manually or via the Android Process Text context menu) are stored locally in your device's private App Preferences (`SharedPreferences`). Whitelisted numbers automatically expire after 7 days and are cleaned locally.</li>
-            <li><strong>Contact List Access:</strong> If granted, the application queries your device's address book (`ContactsContract`) strictly to identify whether incoming callers are known contacts. Your contacts are never read out of your device or transmitted off-device.</li>
-        </ul>
-
-        <h2>3. Use of Permissions</h2>
-        <p>To perform its core functions as a call screening utility, the app requires specific Android permissions:</p>
-        <ul>
-            <li><strong>Call Screening Role (`ROLE_CALL_SCREENING`):</strong> Required to intercept incoming phone calls and automatically block unwanted numbers.</li>
-            <li><strong>Notifications (`POST_NOTIFICATIONS`):</strong> Required to display user-configurable daily and weekly summaries of blocked call activity, as well as active screening status alerts.</li>
-            <li><strong>Process Text (`ACTION_PROCESS_TEXT`):</strong> Allows users to highlight phone numbers in other applications and add them directly to the local app whitelist.</li>
-        </ul>
-
-        <h2>4. Data Retention &amp; User Control</h2>
-        <p>You have total control over all data generated by <strong>Call Screening Agent</strong>:</p>
-        <ul>
-            <li>Call history entries can be individually or completely cleared directly within the application's main log screen.</li>
-            <li>Uninstalling the application immediately removes all locally saved databases, whitelists, and preferences permanently from your device.</li>
-        </ul>
-
-        <h2>5. Children's Privacy</h2>
-        <p>The application does not knowingly collect or request personal information from anyone under the age of 13. All data remains local to the device owner.</p>
-
-        <h2>6. Policy Updates</h2>
-        <p>We may update our Privacy Policy from time to time. Any changes will be posted directly on this web page with an updated effective date.</p>
-
-        <h2>7. Terms & Conditions</h2>
-        <p>Use of this applications is subject to the Terms and Conditions set forth <a href="terms.html">here</a>.</p>
-        
-        <h2>8. Contact Us</h2>
-        <p>If you have any questions or concerns regarding this Privacy Policy, please contact us at:</p>
-        <p><strong>LSD Software</strong><br>
-        Email: <a href="mailto:ljaisd@gmail.com">ljaisd@gmail.com</a></p>
-    </div>
-
-    <footer>
-        LSD Software &copy; 2026. All rights reserved.
-    </footer>
+  <!-- Footer -->
+  <footer>
+    <p>LSD Software &copy; 2026. All rights reserved.</p>
+    <p>
+      <a href="howto.html">User Guide</a> |
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="mailto:support@lsdsoft.example.com">Contact Support</a>
+    </p>
+  </footer>
 
 </body>
 </html>
